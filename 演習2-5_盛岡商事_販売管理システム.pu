@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+actor 販売部
+rectangle 販売管理システム {
+  販売部 --> (出荷状況登録)
+  販売部 --> (注文商品確認)
+}
+@enduml
