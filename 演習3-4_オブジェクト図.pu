@@ -1,0 +1,26 @@
+@startuml 演習3-4
+
+    left to right direction
+    object "<u>車リスト:車</u>" as car1{
+        車の種類
+    }
+    object "<u>車リスト:車</u>" as car2{
+        車の種類
+    }
+    object "<u>タイヤの一覧:タイヤ</u>" as tire1{
+        種類 = オールシーズンタイヤ
+        メーカー
+        サイズ
+        価格
+    }
+    object "<u>タイヤの一覧:タイヤ</u>" as tire2{
+        種類 = スタッドレスタイヤ
+        メーカー
+        サイズ
+        価格
+    }
+    car1 -- tire1
+    car1 -- tire2
+    car2 -- tire1
+
+@enduml
