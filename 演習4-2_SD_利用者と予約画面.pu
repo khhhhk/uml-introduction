@@ -1,3 +1,15 @@
 @startuml
-participant ":利用者"
+hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+participant "user:利用者" as user
+participant ":予約画面" as control
+
+activate user
+user ->> control: ログインする（）
+activate control
+note right of user : 非同期
+control -> control: 認証する（）
+activate control
+deactivate control
+note right of control : 同期
 @enduml
