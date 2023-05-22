@@ -1,0 +1,10 @@
+@startuml 図5-4
+[*] -right-> 待機中
+state point <<choice>>
+state point <<choice>>
+待機中 -down-> point
+point --> 用紙無し
+point --> 印刷中
+用紙無し --> [*]
+印刷中 --> [*]
+@enduml
