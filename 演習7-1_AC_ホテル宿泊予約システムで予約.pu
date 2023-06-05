@@ -1,0 +1,12 @@
+@startuml アクティビティ図
+title 宿泊予約システム
+start
+:ユーザ名入力;
+:パスワード入力;
+if (認証成功) then (true)
+:予約を行う;
+else (false)
+:ユーザとパスワードの再入力;
+endif
+stop
+@enduml
